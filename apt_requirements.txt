@@ -1,0 +1,4 @@
+aspell
+aspell-en
+markdownlint
+pandoc

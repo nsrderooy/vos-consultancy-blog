@@ -4,6 +4,11 @@ set -euo pipefail
 # Remove hash to enable debug
 # set -euox pipefail
 
+if ! [ -f .venv/bin/activate ]
+then
+  python3 -m venv .venv
+fi
+
 if [ -f ./.git/config ]
 then
   gitRoot=$(git rev-parse --show-toplevel)
@@ -14,7 +19,7 @@ fi
 if [ -f "${gitRoot}/pip_requirements.txt" ]
 then
   sudo -k
-  . venv/bin/activate
+  . .venv/bin/activate
   sed -i s/==.*//g "${gitRoot}/pip_requirements.txt"
   python3 -m pip install -U pip
   python3 -m pip install -U -r "${gitRoot}/pip_requirements.txt" && \
