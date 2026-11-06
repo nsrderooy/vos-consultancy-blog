@@ -38,3 +38,36 @@ code {
     padding: 2px 4px;
     border-radius: 4px;
 }
+
+/* GitHub-style Callouts */
+blockquote {
+    margin: 1.5em 0;
+    padding: 0 1em;
+    color: #a89984;
+    border-left: 0.25em solid #504945;
+}
+
+blockquote p:first-child {
+    margin-top: 0;
+}
+
+/* Callout Types */
+blockquote:has(p:first-child:contains("[!NOTE]")),
+blockquote:has(strong:contains("[!NOTE]")) {
+    border-left-color: #83a598;
+}
+
+blockquote:has(p:first-child:contains("[!IMPORTANT]")),
+blockquote:has(strong:contains("[!IMPORTANT]")) {
+    border-left-color: #fb4934;
+}
+
+/* Hide the markers [!NOTE] and [!IMPORTANT] */
+blockquote p:first-child {
+    position: relative;
+}
+
+/* We can't easily hide just the text inside the tag with CSS alone without JS or a build step,
+   but we can style the blockquotes to look like callouts.
+   To truly "translate" these, we'd ideally use a Jekyll plugin or a JS script.
+   For now, let's make the blockquotes look great and I'll provide a JS snippet to hide the tags. */

@@ -9,7 +9,40 @@ layout: default
     {{ jekyll.site.title }}
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
-<body>
+<body onload="formatCallouts()">
     {{ content }}
+
+    <script>
+    function formatCallouts() {
+        const blockquotes = document.querySelectorAll('blockquote');
+        blockquotes.forEach(bq => {
+            const firstPara = bq.querySelector('p');
+            if (!firstPara) return;
+
+            const text = firstPara.innerHTML;
+            const match = text.match(/\[!(NOTE|IMPORTANT)\]/i);
+
+            if (match) {
+                const type = match[1].toUpperCase();
+                const label = type === 'NOTE' ? 'NOTE' : 'IMPORTANT';
+                const color = type === 'NOTE' ? '#83a598' : '#fb4934';
+
+                // Remove the [!TYPE] marker
+                firstPara.innerHTML = text.replace(/\[!(NOTE|IMPORTANT)\]/i, '').trim();
+
+                // Add a styled label
+                const labelSpan = document.createElement('span');
+                labelSpan.textContent = label + ' ';
+                labelSpan.style.color = color;
+                labelSpan.style.fontWeight = 'bold';
+                labelSpan.style.display = 'block';
+                labelSpan.style.marginBottom = '0.5em';
+
+                firstPara.prepend(labelSpan);
+                bq.style.borderLeftColor = color;
+            }
+        });
+    }
+    </script>
 </body>
 </html>
