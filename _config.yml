@@ -1,0 +1,5 @@
+title: My Blog
+description: A blog about cybersecurity and technology
+theme: minima
+plugins:
+  - jekyll-feed

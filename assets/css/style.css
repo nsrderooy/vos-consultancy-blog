@@ -1,0 +1,17 @@
+body {
+    position: relative;
+    background: #ffffff;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("../images/lineArtDark.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 420px auto;
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: -1;
+}
