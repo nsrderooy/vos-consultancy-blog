@@ -3,11 +3,11 @@ layout: default
 title: What is Social Engineering?
 ---
 
+# What is Social Engineering
+
 > [!IMPORTANT]
 > **ISO/IEC 27001:2022 references**  
 > Throughout this article, you will find references to relevant ISO/IEC 27001:2022 Annex A controls. These are provided as guidance to help organisations relate practical information security measures to an established Information Security Management System (ISMS) framework.
-
-# What is Social Engineering
 
 Social engineering is a technique used to deceive individuals into giving out confidential information or performing actions that compromise security. Unlike traditional hacking methods that exploit technical vulnerabilities, social engineering targets the human, attacks are usually based on trust, fear, or urgency.
 
