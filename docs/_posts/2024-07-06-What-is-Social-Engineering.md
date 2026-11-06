@@ -1,6 +1,6 @@
 ---
 layout: default
-title: What Can We Learn from the Recent European Refrigerator Cyberattacks?
+title: What is Social Engineering?
 ---
 
 > [!IMPORTANT]
