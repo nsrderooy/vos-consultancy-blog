@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Information Security, Technology & More
-       description: Thoughts, insights and practical guidance on information security, ISO 27001, data protection and technology.
+description: Thoughts, insights and practical guidance on information security, ISO 27001, data protection and technology.
 ---
 
 # Information Security, Technology & More
