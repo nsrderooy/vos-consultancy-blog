@@ -1,18 +1,41 @@
 body {
     position: relative;
-    background: #ffffff;
+    background: #282828;
+    color: #ebdbb2;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background-image: url("../images/lineArtDark.svg");
+    background-image: url("../images/lineArtLight.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 420px auto;
-    opacity: 0.035;
+    opacity: 0.05;
     pointer-events: none;
     z-index: -1;
+}
+
+a {
+    color: #83a598;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fabd2f;
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #fabd2f;
+}
+
+code {
+    background: #3c3836;
+    color: #a89984;
+    padding: 2px 4px;
+    border-radius: 4px;
 }
 
