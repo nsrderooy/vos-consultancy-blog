@@ -9,11 +9,6 @@ title: Data theft or not
 > **ISO/IEC 27001:2022 references**  
 > Throughout this article, you will find references to relevant ISO/IEC 27001:2022 Annex A controls. These are provided as guidance to help organisations relate practical information security measures to an established Information Security Management System (ISMS) framework.
 
----
-layout: default
-title: Data theft or not
----
-
 <sup><sub>The following story was sent to me anonymously.</sub></sup>
 
 An employee has two jobs, one working for a bank and one working for an investment company.
