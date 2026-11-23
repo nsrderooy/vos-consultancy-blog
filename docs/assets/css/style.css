@@ -1,7 +1,27 @@
+:root {
+    /* Gruvbox Dark */
+    --bg: #282828;
+    --bg-soft: #32302f;
+    --bg-hard: #1d2021;
+    --fg: #ebdbb2;
+    --fg-dim: #d5c4a1;
+    --muted: #a89984;
+    --line: #504945;
+
+    /* Gruvbox accents */
+    --red: #fb4934;
+    --green: #b8bb26;
+    --yellow: #fabd2f;
+    --blue: #83a598;
+    --purple: #d3869b;
+    --aqua: #8ec07c;
+    --orange: #fe8019;
+}
+
 body {
     position: relative;
-    background: #282828;
-    color: #ebdbb2;
+    background: var(--bg);
+    color: var(--fg);
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -19,22 +39,22 @@ body::before {
 }
 
 a {
-    color: #83a598;
+    color: var(--aqua);
     text-decoration: none;
 }
 
 a:hover {
-    color: #fabd2f;
+    color: var(--yellow);
     text-decoration: underline;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #fabd2f;
+    color: var(--yellow);
 }
 
 code {
-    background: #3c3836;
-    color: #a89984;
+    background: var(--bg-soft);
+    color: var(--aqua);
     padding: 2px 4px;
     border-radius: 4px;
 }
@@ -43,8 +63,8 @@ code {
 blockquote {
     margin: 1.5em 0;
     padding: 0 1em;
-    color: #a89984;
-    border-left: 0.25em solid #504945;
+    color: var(--muted);
+    border-left: 0.25em solid var(--line);
 }
 
 blockquote p:first-child {
@@ -54,12 +74,12 @@ blockquote p:first-child {
 /* Callout Types */
 blockquote:has(p:first-child:contains("[!NOTE]")),
 blockquote:has(strong:contains("[!NOTE]")) {
-    border-left-color: #83a598;
+    border-left-color: var(--blue);
 }
 
 blockquote:has(p:first-child:contains("[!IMPORTANT]")),
 blockquote:has(strong:contains("[!IMPORTANT]")) {
-    border-left-color: #fb4934;
+    border-left-color: var(--red);
 }
 
 /* Hide the markers [!NOTE] and [!IMPORTANT] */
@@ -67,7 +87,7 @@ blockquote p:first-child {
     position: relative;
 }
 
-/* We can't easily hide just the text inside the tag with CSS alone without JS or a build step,
-   but we can style the blockquotes to look like callouts.
-   To truly "translate" these, we'd ideally use a Jekyll plugin or a JS script.
-   For now, let's make the blockquotes look great and I'll provide a JS snippet to hide the tags. */
+/* Callout styling notes:
+   CSS alone cannot reliably remove individual text markers.
+   Use JavaScript or a build step for marker removal. */
+
