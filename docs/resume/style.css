@@ -1,9 +1,21 @@
 :root {
-    --navy: #203c82;
-    --ink: #1b2534;
-    --muted: #526078;
-    --pale: #f3f6fb;
-    --line: #d9e1ef;
+    /* Gruvbox Dark */
+    --bg: #282828;
+    --bg-soft: #32302f;
+    --bg-hard: #1d2021;
+    --fg: #ebdbb2;
+    --ink: #ebdbb2;
+    --muted: #a89984;
+    --line: #504945;
+
+    /* Accent colours */
+    --navy: #83a598;
+    --red: #fb4934;
+    --green: #b8bb26;
+    --yellow: #fabd2f;
+    --blue: #83a598;
+    --purple: #d3869b;
+    --aqua: #8ec07c;
 }
 
 * {
@@ -12,7 +24,7 @@
 
 body {
     margin: 0;
-    background: #e9edf3;
+    background: var(--bg-hard);
     color: var(--ink);
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.42;
@@ -22,15 +34,16 @@ body {
     width: min(100%, 210mm);
     min-height: 297mm;
     margin: 24px auto;
-    background: white;
-    box-shadow: 0 8px 30px #0002;
+    background: var(--bg);
+    box-shadow: 0 8px 30px #0008;
     overflow: hidden;
 }
 
 header {
-    background: var(--navy);
-    color: white;
+    background: var(--bg-soft);
+    color: var(--fg);
     padding: 28px 34px 24px;
+    border-bottom: 3px solid var(--navy);
 }
 
 h1 {
@@ -38,6 +51,7 @@ h1 {
     font-size: 36px;
     letter-spacing: .2px;
     line-height: 1.1;
+    color: var(--fg);
 }
 
 .headline {
@@ -46,6 +60,7 @@ h1 {
     font-weight: 700;
     line-height: 1.5;
     letter-spacing: .35px;
+    color: var(--aqua);
 }
 
 .columns {
@@ -61,7 +76,7 @@ section {
 }
 
 h2 {
-    color: var(--navy);
+    color: var(--yellow);
     font-size: 17px;
     margin: 0 0 12px;
     padding-bottom: 6px;
@@ -93,9 +108,14 @@ li {
 }
 
 a {
-    color: var(--navy);
+    color: var(--aqua);
     text-decoration: none;
     overflow-wrap: anywhere;
+}
+
+a:hover {
+    color: var(--yellow);
+    text-decoration: underline;
 }
 
 .job {
@@ -114,6 +134,7 @@ a {
 .role {
     font-weight: 700;
     font-size: 13px;
+    color: var(--fg);
 }
 
 .date {
@@ -125,11 +146,13 @@ a {
     font-weight: 700;
     font-size: 12.5px;
     margin-bottom: 4px;
+    color: var(--blue);
 }
 
 .job-desc {
     font-size: 12.5px;
     line-height: 1.45;
+    color: var(--ink);
 }
 
 .skills li {
@@ -163,7 +186,7 @@ a {
 
 @media print {
     body {
-        background: white;
+        background: var(--bg-hard);
     }
 
     .resume {
