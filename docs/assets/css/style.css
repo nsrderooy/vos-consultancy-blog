@@ -1,4 +1,6 @@
 :root {
+    color-scheme: dark;
+
     /* Gruvbox Dark */
     --bg: #282828;
     --bg-soft: #32302f;
@@ -8,7 +10,7 @@
     --muted: #a89984;
     --line: #504945;
 
-    /* Gruvbox accents */
+    // Gruvbox accents
     --red: #fb4934;
     --green: #b8bb26;
     --yellow: #fabd2f;
@@ -16,6 +18,29 @@
     --purple: #d3869b;
     --aqua: #8ec07c;
     --orange: #fe8019;
+}
+
+/* Gruvbox Light */
+@media (prefers-color-scheme: light) {
+    :root {
+        color-scheme: light;
+
+        --bg: #fbf1c7;
+        --bg-soft: #f2e5bc;
+        --bg-hard: #f9f5d7;
+        --fg: #3c3836;
+        --fg-dim: #504945;
+        --muted: #7c6f64;
+        --line: #d5c4a1;
+
+        --red: #cc241d;
+        --green: #98971a;
+        --yellow: #d79921;
+        --blue: #458588;
+        --purple: #b16286;
+        --aqua: #689d6a;
+        --orange: #d65d0e;
+    }
 }
 
 body {
